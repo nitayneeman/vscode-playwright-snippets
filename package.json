@@ -1,0 +1,63 @@
+{
+  "name": "playwright-snippets",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Nitay Neeman",
+  "homepage": "https://github.com/nitayneeman/vscode-playwright-snippets",
+  "keywords": [
+    "Playwright"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitayneeman/vscode-playwright-snippets.git"
+  },
+  "bugs": "https://github.com/nitayneeman/vscode-playwright-snippets/issues",
+  "displayName": "Playwright Snippets",
+  "publisher": "nitayneeman",
+  "icon": "images/playwright-logo.png",
+  "galleryBanner": {
+    "color": "#2b3137",
+    "theme": "light"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "badges": [
+    {
+      "description": "Build",
+      "url": "https://travis-ci.com/nitayneeman/vscode-playwright-snippets.svg?token=vHfpxFNvotCsScqrpvMs&branch=master",
+      "href": "https://travis-ci.com/nitayneeman/vscode-playwright-snippets"
+    }
+  ],
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "vscode:publish": "vsce publish"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
