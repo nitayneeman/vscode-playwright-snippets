@@ -1,1 +1,27 @@
-{}
+{
+  "Playwright": {
+    "prefix": "pw-import",
+    "body": "const playwright = require('playwright');",
+    "description": "Imports Playwright's full module"
+  },
+  "Playwright - chromium": {
+    "prefix": "pw-import-chromium",
+    "body": "const { chromium } = require('playwright');",
+    "description": "Imports Playwright's Chromium module"
+  },
+  "Playwright - firefox": {
+    "prefix": "pw-import-firefox",
+    "body": "const { firefox } = require('playwright');",
+    "description": "Imports Playwright's Firefox module"
+  },
+  "Playwright - webkit": {
+    "prefix": "pw-import-webkit",
+    "body": "const { webkit } = require('playwright');",
+    "description": "Imports Playwright's Webkit module"
+  },
+  "playwright - devices": {
+    "prefix": "pw-import-devices",
+    "body": "const { devices } = require('playwright');",
+    "description": "Imports the device descriptors module"
+  }
+}
