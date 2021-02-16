@@ -34,6 +34,11 @@
     "body": "const ${1:browser} = await chromium.launch($0);",
     "description": "Creates a Chromium instance and attaches Playwright to it"
   },
+  "Launch Chromium Server": {
+    "prefix": "pw-launchServer-chromium",
+    "body": "const ${1:browserServer} = await chromium.launchServer();",
+    "description": "Creates a Chromium server instance the client can connect to"
+  },
   "Connect Firefox": {
     "prefix": "pw-connect-firefox",
     "body": ["const ${1:browser} = await firefox.connect({", "\twsEndpoint: '$0'", "});"],
@@ -44,6 +49,11 @@
     "body": "const ${1:browser} = await firefox.launch($0);",
     "description": "Creates a Firefox instance and attaches Playwright to it"
   },
+  "Launch Firefox Server": {
+    "prefix": "pw-launchServer-firefox",
+    "body": "const ${1:browserServer} = await firefox.launchServer();",
+    "description": "Creates a Firefox server instance the client can connect to"
+  },
   "Connect Webkit": {
     "prefix": "pw-connect-webkit",
     "body": ["const ${1:browser} = await webkit.connect({", "\twsEndpoint: '$0'", "});"],
@@ -53,5 +63,10 @@
     "prefix": "pw-launch-webkit",
     "body": "const ${1:browser} = await webkit.launch($0);",
     "description": "Creates a Webkit instance and attaches Playwright to it"
+  },
+  "Launch Webkit Server": {
+    "prefix": "pw-launchServer-webkit",
+    "body": "const ${1:browserServer} = await webkit.launchServer();",
+    "description": "Creates a Webkit server instance the client can connect to"
   }
 }
