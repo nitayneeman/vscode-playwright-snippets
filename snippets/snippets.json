@@ -1,27 +1,57 @@
 {
-  "Playwright": {
+  "Playwright module": {
     "prefix": "pw-import",
     "body": "const playwright = require('playwright');",
     "description": "Imports Playwright's full module"
   },
-  "Playwright - chromium": {
+  "Import Chromium": {
     "prefix": "pw-import-chromium",
     "body": "const { chromium } = require('playwright');",
     "description": "Imports Playwright's Chromium module"
   },
-  "Playwright - firefox": {
+  "Import Firefox": {
     "prefix": "pw-import-firefox",
     "body": "const { firefox } = require('playwright');",
     "description": "Imports Playwright's Firefox module"
   },
-  "Playwright - webkit": {
+  "Import Webkit": {
     "prefix": "pw-import-webkit",
     "body": "const { webkit } = require('playwright');",
     "description": "Imports Playwright's Webkit module"
   },
-  "playwright - devices": {
+  "Import devices": {
     "prefix": "pw-import-devices",
     "body": "const { devices } = require('playwright');",
     "description": "Imports the device descriptors module"
+  },
+  "Connect Chromium": {
+    "prefix": "pw-connect-chromium",
+    "body": ["const ${1:browser} = await chromium.connect({", "\twsEndpoint: '$0'", "});"],
+    "description": "Attaches Playwright to an existing Chromium instance"
+  },
+  "Launch Chromium": {
+    "prefix": "pw-launch-chromium",
+    "body": "const ${1:browser} = await chromium.launch($0);",
+    "description": "Creates a Chromium instance and attaches Playwright to it"
+  },
+  "Connect Firefox": {
+    "prefix": "pw-connect-firefox",
+    "body": ["const ${1:browser} = await firefox.connect({", "\twsEndpoint: '$0'", "});"],
+    "description": "Attaches Playwright to an existing Firefox instance"
+  },
+  "Launch Firefox": {
+    "prefix": "pw-launch-firefox",
+    "body": "const ${1:browser} = await firefox.launch($0);",
+    "description": "Creates a Firefox instance and attaches Playwright to it"
+  },
+  "Connect Webkit": {
+    "prefix": "pw-connect-webkit",
+    "body": ["const ${1:browser} = await webkit.connect({", "\twsEndpoint: '$0'", "});"],
+    "description": "Attaches Playwright to an existing Webkit instance"
+  },
+  "Launch Webkit": {
+    "prefix": "pw-launch-webkit",
+    "body": "const ${1:browser} = await webkit.launch($0);",
+    "description": "Creates a Webkit instance and attaches Playwright to it"
   }
 }
