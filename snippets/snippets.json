@@ -133,5 +133,15 @@
     "prefix": "pw-browserContext-unroute",
     "body": "await context.unroute('$0');",
     "description": "Removes registered route of a page withing the browser context"
+  },
+  "browserContext.on('close')": {
+    "prefix": "pw-browserContext-on-close",
+    "body": ["context.on('close', () => {", "\t$0", "});"],
+    "description": "Emitted when the browser context is closed (manually or when the browser application is crashed)"
+  },
+  "browserContext.on('page')": {
+    "prefix": "pw-browserContext-on-page",
+    "body": ["context.on('page', () => {", "\t$0", "});"],
+    "description": "Emitted when a page is created within the browser context"
   }
 }
