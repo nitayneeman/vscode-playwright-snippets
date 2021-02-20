@@ -92,7 +92,7 @@
   "browser.newPage": {
     "prefix": "pw-browser-newPage",
     "body": "const ${1:page} = await browser.newPage();",
-    "description": "Resolves a new page in a new browser context"
+    "description": "Creates a new page in a new browser context"
   },
   "browser.version": {
     "prefix": "pw-browser-version",
@@ -103,5 +103,35 @@
     "prefix": "pw-browser-on-disconnected",
     "body": ["browser.on('disconnected', () => {", "\t$0", "});"],
     "description": "Emitted when the browser gets disconnected from the browser application"
+  },
+  "browserContext.close": {
+    "prefix": "pw-browserContext-close",
+    "body": "await context.close();",
+    "description": "Closes the browser context including all of its pages"
+  },
+  "browserContext.cookies": {
+    "prefix": "pw-browserContext-cookies",
+    "body": "await context.cookies();",
+    "description": "Returns all cookies of the browser context"
+  },
+  "browserContext.newPage": {
+    "prefix": "pw-browserContext-newPage",
+    "body": "const ${1:page} = await context.newPage();",
+    "description": "Creates a new page in the browser context"
+  },
+  "browserContext.pages": {
+    "prefix": "pw-browserContext-pages",
+    "body": "await context.pages();",
+    "description": "Returns all pages of the browser context"
+  },
+  "browserContext.route": {
+    "prefix": "pw-browserContext-route",
+    "body": "await context.route('$1', ${2:route} => {$0});",
+    "description": "Modifies the network request that made by any page within the browser context"
+  },
+  "browserContext.unroute": {
+    "prefix": "pw-browserContext-unroute",
+    "body": "await context.unroute('$0');",
+    "description": "Removes registered route of a page withing the browser context"
   }
 }
