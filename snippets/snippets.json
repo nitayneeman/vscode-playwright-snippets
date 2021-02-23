@@ -143,5 +143,20 @@
     "prefix": "pw-browserContext-on-page",
     "body": ["context.on('page', () => {", "\t$0", "});"],
     "description": "Emitted when a page is created within the browser context"
+  },
+  "browserServer.close": {
+    "prefix": "pw-browserServer-close",
+    "body": "await browserServer.close();",
+    "description": "Closes the browser and makes sure the process is terminated"
+  },
+  "browserServer.kill": {
+    "prefix": "pw-browserServer-kill",
+    "body": "await browserServer.kill();",
+    "description": "Kills the browser process and waits until the process exits"
+  },
+  "browserServer.on('close')": {
+    "prefix": "pw-browserServer-on-close",
+    "body": ["browserServer.on('close', () => {", "\t$0", "});"],
+    "description": "Emitted when the browser server is closed"
   }
 }
