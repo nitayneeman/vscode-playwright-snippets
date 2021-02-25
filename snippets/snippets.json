@@ -158,5 +158,299 @@
     "prefix": "pw-browserServer-on-close",
     "body": ["browserServer.on('close', () => {", "\t$0", "});"],
     "description": "Emitted when the browser server is closed"
+  },
+  "page.$": {
+    "prefix": "pw-page-$",
+    "body": "await page.$('$0');",
+    "description": "Finds a matching element by a query selector within the page"
+  },
+  "page.$$": {
+    "prefix": "pw-page-$$",
+    "body": "await page.$$('$0');",
+    "description": "Finds all matching elements by a query selector within the page"
+  },
+  "page.$eval": {
+    "prefix": "pw-page-$eval",
+    "body": ["await page.$eval('$2', element => {", "\t${3:console.log(element);}", "});"],
+    "description": "Finds a matching element by a query selector within the page and passes the result as the first argument to a function"
+  },
+  "page.$$eval": {
+    "prefix": "pw-page-$$eval",
+    "body": ["await page.$$eval('$2', elements => {", "\t${3:console.log(elements);}", "});"],
+    "description": "Finds all matching elements by a query selector within the page and passes the results as the first argument to a function"
+  },
+  "page.bringToFront": {
+    "prefix": "pw-page-bringToFront",
+    "body": "await page.bringToFront();",
+    "description": "Actives the corresponding tab of the page"
+  },
+  "page.click": {
+    "prefix": "pw-page-click",
+    "body": "await page.click('$0');",
+    "description": "Clicks in the center of an element within the page"
+  },
+  "page.close": {
+    "prefix": "pw-page-close",
+    "body": "await page.close();",
+    "description": "Closes the page"
+  },
+  "page.content": {
+    "prefix": "pw-page-content",
+    "body": "await page.content();",
+    "description": "Returns the full HTML contents of the page"
+  },
+  "page.dblclick": {
+    "prefix": "pw-page-dblclick",
+    "body": "await page.dblclick('$0');",
+    "description": "Clicks twice in the center of an element within the page"
+  },
+  "page.emulateMedia": {
+    "prefix": "pw-page-emulateMedia",
+    "body": "await page.emulateMedia({ media: ${2|'screen','print',null|} });",
+    "description": "Emulates a given CSS media feature or type within the page"
+  },
+  "page.evaluate": {
+    "prefix": "pw-page-evaluate",
+    "body": ["await page.evaluate(() => {", "\t$0", "});"],
+    "description": "Evaluates a function in the page context"
+  },
+  "page.fill": {
+    "prefix": "pw-page-fill",
+    "body": "await page.fill('$1', '$2');",
+    "description": "Focuses an input element within the page and inserts to it the given value"
+  },
+  "page.focus": {
+    "prefix": "pw-page-focus",
+    "body": "await page.focus('$0');",
+    "description": "Focuses an element within the page"
+  },
+  "page.goBack": {
+    "prefix": "pw-page-goBack",
+    "body": "await page.goBack();",
+    "description": "Navigates to the previous page in the history"
+  },
+  "page.goForward": {
+    "prefix": "pw-page-goForward",
+    "body": "await page.goForward();",
+    "description": "Navigates to the next page in the history"
+  },
+  "page.goto": {
+    "prefix": "pw-page-goto",
+    "body": "await page.goto('$0');",
+    "description": "Navigates the page to a URL"
+  },
+  "page.hover": {
+    "prefix": "pw-page-hover",
+    "body": "await page.hover('$0');",
+    "description": "Hovers over the center of an element within the page"
+  },
+  "page.keyboard.down": {
+    "prefix": "pw-page-keyboard-down",
+    "body": "await page.keyboard.down('$0');",
+    "description": "Dispatches a `keydown` event within the page"
+  },
+  "page.keyboard.press": {
+    "prefix": "pw-page-keyboard-press",
+    "body": "await page.keyboard.press('$0');",
+    "description": "Presses on a specific key within the page"
+  },
+  "page.keyboard.sendCharacter": {
+    "prefix": "pw-page-keyboard-sendCharacter",
+    "body": "await page.keyboard.sendCharacter('$0');",
+    "description": "Dispatches a `keypress` and `input` event within the page"
+  },
+  "page.keyboard.type": {
+    "prefix": "pw-page-keyboard-type",
+    "body": "await page.keyboard.type('$0');",
+    "description": "Types a text into a focused element within the page"
+  },
+  "page.keyboard.up": {
+    "prefix": "pw-page-keyboard-up",
+    "body": "await page.keyboard.up('$0');",
+    "description": "Dispatches a `keyup` event within the page"
+  },
+  "page.metrics": {
+    "prefix": "pw-page-metrics",
+    "body": "const ${1:metrics} = await page.metrics();",
+    "description": "Returns runtime metrics of the page"
+  },
+  "page.mouse.click": {
+    "prefix": "pw-page-mouse-click",
+    "body": "await page.mouse.click(${2:0}, ${3:100});",
+    "description": "Clicks on area within the page by coordinates"
+  },
+  "page.mouse.down": {
+    "prefix": "pw-page-mouse-down",
+    "body": "await page.mouse.down();",
+    "description": "Dispatches a `mousedown` event within the page"
+  },
+  "page.mouse.move": {
+    "prefix": "pw-page-mouse-move",
+    "body": "await page.mouse.move();",
+    "description": "Dispatches a `mousemove` event within the page"
+  },
+  "page.mouse.up": {
+    "prefix": "pw-page-mouse-up",
+    "body": "await page.mouse.up();",
+    "description": "Dispatches a `mouseup` event within the page"
+  },
+  "page.pdf": {
+    "prefix": "pw-page-pdf",
+    "body": "await page.pdf({ path: '${2:page.pdf}', format: '${3|A4,Letter,Legal,Tabloid,Ledger,A0,A1,A2,A3,A5,A6|}' });",
+    "description": "Generates a PDF from the page"
+  },
+  "page.reload": {
+    "prefix": "pw-page-reload",
+    "body": "await page.reload();",
+    "description": "Reloads the page"
+  },
+  "page.screenshot": {
+    "prefix": "pw-page-screenshot",
+    "body": "await page.screenshot({ path: '${2:page.png}', fullPage: '${3|true,false|}' });",
+    "description": "Generates a screenshot of the page"
+  },
+  "page.title": {
+    "prefix": "pw-page-title",
+    "body": "await page.title();",
+    "description": "Returns the page's title"
+  },
+  "page.url": {
+    "prefix": "pw-page-url",
+    "body": "await page.url();",
+    "description": "Returns the page's URL"
+  },
+  "page.waitFor": {
+    "prefix": "pw-page-waitFor",
+    "body": "await page.waitFor($0);",
+    "description": "Waits until an element/predicate/timeout within the page is resolved"
+  },
+  "page.waitForFunction": {
+    "prefix": "pw-page-waitForFunction",
+    "body": "await page.waitForFunction($0);",
+    "description": "Waits until a predicate within the page returns a truthy value"
+  },
+  "page.waitForNavigation": {
+    "prefix": "pw-page-waitForNavigation",
+    "body": "await page.waitForNavigation();",
+    "description": "Waits until the page navigates to a new URL or reloads"
+  },
+  "page.waitForRequest": {
+    "prefix": "pw-page-waitForRequest",
+    "body": "await page.waitForRequest($0);",
+    "description": "Waits until a request by URL/predicate is resolved"
+  },
+  "page.waitForResponse": {
+    "prefix": "pw-page-waitForResponse",
+    "body": "await page.waitForResponse($0);",
+    "description": "Waits until a response by URL/predicate is resolved"
+  },
+  "page.waitForSelector": {
+    "prefix": "pw-page-waitForSelector",
+    "body": "await page.waitForSelector('$0');",
+    "description": "Waits until an element (by selector) is appeared in the page"
+  },
+  "page.waitForXPath": {
+    "prefix": "pw-page-waitForXPath",
+    "body": "await page.waitForXPath('$0');",
+    "description": "Waits until an element (by XPath) is appeared in the page"
+  },
+  "page.waitForFileChooser": {
+    "prefix": "pw-page-waitForFileChooser",
+    "body": "await page.waitForFileChooser();",
+    "description": "Waits until a file chooser is requested in the page"
+  },
+  "page.on('close')": {
+    "prefix": "pw-page-on-close",
+    "body": ["page.on('close', () => {", "\t${0:console.log('Closed');}", "});"],
+    "description": "Emitted when the page is closed"
+  },
+  "page.on('console')": {
+    "prefix": "pw-page-on-console",
+    "body": ["page.on('console', msg => {", "\t${0:console.log(msg.args());}", "});"],
+    "description": "Emitted when a script within the page calls one of console API methods"
+  },
+  "page.on('dialog')": {
+    "prefix": "pw-page-on-dialog",
+    "body": ["page.on('dialog', dialog => {", "\t${0:console.log(dialog.message());}", "});"],
+    "description": "Emitted when a dialog appears in the page"
+  },
+  "page.on('domcontentloaded')": {
+    "prefix": "pw-page-on-domcontentloaded",
+    "body": [
+      "page.on('domcontentloaded', () => {",
+      "\t${0:console.log('DOMContentLoaded is dispatched');}",
+      "});"
+    ],
+    "description": "Emitted when the `DOMContentLoaded` event of the page is dispatched"
+  },
+  "page.on('error')": {
+    "prefix": "pw-page-on-error",
+    "body": ["page.on('error', error => {", "\t${0:console.log(error);}", "});"],
+    "description": "Emitted when the page crashes"
+  },
+  "page.on('frameattached')": {
+    "prefix": "pw-page-on-frameattached",
+    "body": ["page.on('frameattached', frame => {", "\t${0:console.log(frame.content());}", "});"],
+    "description": "Emitted when a frame within the page is attached"
+  },
+  "page.on('framedetached')": {
+    "prefix": "pw-page-on-framedetached",
+    "body": ["page.on('framedetached', frame => {", "\t${0:console.log(frame.content());}", "});"],
+    "description": "Emitted when a frame within the page is detached"
+  },
+  "page.on('framenavigated')": {
+    "prefix": "pw-page-on-framenavigated",
+    "body": ["page.on('framenavigated', frame => {", "\t${0:console.log(frame.content());}", "});"],
+    "description": "Emitted when a frame within the page is navigated to a new url"
+  },
+  "page.on('load')": {
+    "prefix": "pw-page-on-load",
+    "body": ["page.on('load', () => {", "\t${0:console.log('Loaded');}", "});"],
+    "description": "Emitted when the `load` event of the page is dispatched"
+  },
+  "page.on('metrics')": {
+    "prefix": "pw-page-on-metrics",
+    "body": ["page.on('metrics', result => {", "\t${0:console.log(result.metrics);}", "});"],
+    "description": "Emitted when a script within the page invokes `console.timeStamp`"
+  },
+  "page.on('pageerror')": {
+    "prefix": "pw-page-on-pageerror",
+    "body": ["page.on('pageerror', error => {", "\t${0:console.log(error);}", "});"],
+    "description": "Emitted when an uncaught exception happens within the page"
+  },
+  "page.on('popup')": {
+    "prefix": "pw-page-on-popup",
+    "body": ["page.on('popup', page => {", "\t${0:console.log(page.content());}", "});"],
+    "description": "Emitted when the page opens a new tab or window"
+  },
+  "page.on('request')": {
+    "prefix": "pw-page-on-request",
+    "body": ["page.on('request', request => {", "\t${0:console.log(request.url());}", "});"],
+    "description": "Emitted when the request is issued by the page"
+  },
+  "page.on('requestfailed')": {
+    "prefix": "pw-page-on-requestfailed",
+    "body": ["page.on('requestfailed', request => {", "\t${0:console.log(request.url());}", "});"],
+    "description": "Emitted when a request fails"
+  },
+  "page.on('requestfinished')": {
+    "prefix": "pw-page-on-requestfinished",
+    "body": ["page.on('requestfailed', request => {", "\t${0:console.log(request.url());}", "});"],
+    "description": "Emitted when a request finishes successfully"
+  },
+  "page.on('response')": {
+    "prefix": "pw-page-on-response",
+    "body": ["page.on('response', response => {", "\t${0:console.log(response.status());}", "});"],
+    "description": "Emitted when a response is received"
+  },
+  "page.on('workercreated')": {
+    "prefix": "pw-page-on-workercreated",
+    "body": ["page.on('workercreated', worker => {", "\t${0:console.log(worker.url());}", "});"],
+    "description": "Emitted when a dedicated `WebWorker` is spawned by the page"
+  },
+  "page.on('workerdestroyed')": {
+    "prefix": "pw-page-on-workerdestroyed",
+    "body": ["page.on('workerdestroyed', worker => {", "\t${0:console.log(worker.url());}", "});"],
+    "description": "Emitted when a dedicated `WebWorker` is terminated"
   }
 }
