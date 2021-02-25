@@ -244,65 +244,25 @@
     "body": "await page.hover('$0');",
     "description": "Hovers over the center of an element within the page"
   },
-  "page.keyboard.down": {
-    "prefix": "pw-page-keyboard-down",
-    "body": "await page.keyboard.down('$0');",
-    "description": "Dispatches a `keydown` event within the page"
-  },
-  "page.keyboard.press": {
-    "prefix": "pw-page-keyboard-press",
-    "body": "await page.keyboard.press('$0');",
-    "description": "Presses on a specific key within the page"
-  },
-  "page.keyboard.sendCharacter": {
-    "prefix": "pw-page-keyboard-sendCharacter",
-    "body": "await page.keyboard.sendCharacter('$0');",
-    "description": "Dispatches a `keypress` and `input` event within the page"
-  },
-  "page.keyboard.type": {
-    "prefix": "pw-page-keyboard-type",
-    "body": "await page.keyboard.type('$0');",
-    "description": "Types a text into a focused element within the page"
-  },
-  "page.keyboard.up": {
-    "prefix": "pw-page-keyboard-up",
-    "body": "await page.keyboard.up('$0');",
-    "description": "Dispatches a `keyup` event within the page"
-  },
-  "page.metrics": {
-    "prefix": "pw-page-metrics",
-    "body": "const ${1:metrics} = await page.metrics();",
-    "description": "Returns runtime metrics of the page"
-  },
-  "page.mouse.click": {
-    "prefix": "pw-page-mouse-click",
-    "body": "await page.mouse.click(${2:0}, ${3:100});",
-    "description": "Clicks on area within the page by coordinates"
-  },
-  "page.mouse.down": {
-    "prefix": "pw-page-mouse-down",
-    "body": "await page.mouse.down();",
-    "description": "Dispatches a `mousedown` event within the page"
-  },
-  "page.mouse.move": {
-    "prefix": "pw-page-mouse-move",
-    "body": "await page.mouse.move();",
-    "description": "Dispatches a `mousemove` event within the page"
-  },
-  "page.mouse.up": {
-    "prefix": "pw-page-mouse-up",
-    "body": "await page.mouse.up();",
-    "description": "Dispatches a `mouseup` event within the page"
-  },
   "page.pdf": {
     "prefix": "pw-page-pdf",
     "body": "await page.pdf({ path: '${2:page.pdf}', format: '${3|A4,Letter,Legal,Tabloid,Ledger,A0,A1,A2,A3,A5,A6|}' });",
     "description": "Generates a PDF from the page"
   },
+  "page.press": {
+    "prefix": "pw-page-press",
+    "body": "await page.press('$1', '${2:F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|Backspace|Tab|Delete|Escape|Enter|PageUP|PageDown|ArrowUp|ArrowDown|ArrowLeft|ArrowRight}', fullPage: '${3|true,false|}' });",
+    "description": "Focuses an element within the page and presses on a specific key"
+  },
   "page.reload": {
     "prefix": "pw-page-reload",
     "body": "await page.reload();",
     "description": "Reloads the page"
+  },
+  "page.route": {
+    "prefix": "pw-page-route",
+    "body": "await page.route('$1', ${2:route} => {$0});",
+    "description": "Modifies the network request that made by the page"
   },
   "page.screenshot": {
     "prefix": "pw-page-screenshot",
@@ -314,20 +274,35 @@
     "body": "await page.title();",
     "description": "Returns the page's title"
   },
+  "page.type": {
+    "prefix": "pw-page-type",
+    "body": "await page.type('$1', '$2');",
+    "description": "Focuses an element within the page and sends keyboard events for each character in the text"
+  },
+  "page.unroute": {
+    "prefix": "pw-page-unroute",
+    "body": "await page.unroute('$0');",
+    "description": "Removes registered route of the page"
+  },
   "page.url": {
     "prefix": "pw-page-url",
     "body": "await page.url();",
     "description": "Returns the page's URL"
   },
-  "page.waitFor": {
-    "prefix": "pw-page-waitFor",
-    "body": "await page.waitFor($0);",
-    "description": "Waits until an element/predicate/timeout within the page is resolved"
+  "page.waitForEvent": {
+    "prefix": "pw-page-waitForEvent",
+    "body": "await page.waitForEvent($0);",
+    "description": "Waits until an event within the page is fired"
   },
   "page.waitForFunction": {
     "prefix": "pw-page-waitForFunction",
     "body": "await page.waitForFunction($0);",
     "description": "Waits until a predicate within the page returns a truthy value"
+  },
+  "page.waitForLoadState": {
+    "prefix": "pw-page-waitForLoadState",
+    "body": "await page.waitForLoadState(${0:load|domcontentloaded|networkidle});",
+    "description": "Waits until the required load state of the page has been reached"
   },
   "page.waitForNavigation": {
     "prefix": "pw-page-waitForNavigation",
@@ -347,17 +322,12 @@
   "page.waitForSelector": {
     "prefix": "pw-page-waitForSelector",
     "body": "await page.waitForSelector('$0');",
-    "description": "Waits until an element (by selector) is appeared in the page"
+    "description": "Waits until an element by selector in the page satisfies the state option"
   },
-  "page.waitForXPath": {
-    "prefix": "pw-page-waitForXPath",
-    "body": "await page.waitForXPath('$0');",
-    "description": "Waits until an element (by XPath) is appeared in the page"
-  },
-  "page.waitForFileChooser": {
-    "prefix": "pw-page-waitForFileChooser",
-    "body": "await page.waitForFileChooser();",
-    "description": "Waits until a file chooser is requested in the page"
+  "page.waitForTimeout": {
+    "prefix": "pw-page-waitForTimeout",
+    "body": "await page.waitForTimeout($0);",
+    "description": "Waits for a given timeout"
   },
   "page.on('close')": {
     "prefix": "pw-page-on-close",
