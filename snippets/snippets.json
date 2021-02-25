@@ -339,6 +339,11 @@
     "body": ["page.on('console', msg => {", "\t${0:console.log(msg.args());}", "});"],
     "description": "Emitted when a script within the page calls one of console API methods"
   },
+  "page.on('crash')": {
+    "prefix": "pw-page-on-crash",
+    "body": ["page.on('crash', () => {", "\t${0:console.log('Crashed');}", "});"],
+    "description": "Emitted when the page crashes"
+  },
   "page.on('dialog')": {
     "prefix": "pw-page-on-dialog",
     "body": ["page.on('dialog', dialog => {", "\t${0:console.log(dialog.message());}", "});"],
@@ -352,11 +357,6 @@
       "});"
     ],
     "description": "Emitted when the `DOMContentLoaded` event of the page is dispatched"
-  },
-  "page.on('error')": {
-    "prefix": "pw-page-on-error",
-    "body": ["page.on('error', error => {", "\t${0:console.log(error);}", "});"],
-    "description": "Emitted when the page crashes"
   },
   "page.on('frameattached')": {
     "prefix": "pw-page-on-frameattached",
@@ -413,14 +413,9 @@
     "body": ["page.on('response', response => {", "\t${0:console.log(response.status());}", "});"],
     "description": "Emitted when a response is received"
   },
-  "page.on('workercreated')": {
-    "prefix": "pw-page-on-workercreated",
-    "body": ["page.on('workercreated', worker => {", "\t${0:console.log(worker.url());}", "});"],
+  "page.on('worker')": {
+    "prefix": "pw-page-on-worker",
+    "body": ["page.on('worker', worker => {", "\t${0:console.log(worker.url());}", "});"],
     "description": "Emitted when a dedicated `WebWorker` is spawned by the page"
-  },
-  "page.on('workerdestroyed')": {
-    "prefix": "pw-page-on-workerdestroyed",
-    "body": ["page.on('workerdestroyed', worker => {", "\t${0:console.log(worker.url());}", "});"],
-    "description": "Emitted when a dedicated `WebWorker` is terminated"
   }
 }
