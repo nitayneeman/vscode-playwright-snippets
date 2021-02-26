@@ -383,6 +383,31 @@
     "body": ["page.on('metrics', result => {", "\t${0:console.log(result.metrics);}", "});"],
     "description": "Emitted when a script within the page invokes `console.timeStamp`"
   },
+  "page.mouse.click": {
+    "prefix": "pw-page-mouse-click",
+    "body": "await page.mouse.click(${2:0}, ${3:100});",
+    "description": "Clicks on area within the page by coordinates"
+  },
+  "page.mouse.dblclick": {
+    "prefix": "pw-page-mouse-dblclick",
+    "body": "await page.mouse.dblclick(${2:0}, ${3:100});",
+    "description": "Clicks twice on area within the page by coordinates"
+  },
+  "page.mouse.down": {
+    "prefix": "pw-page-mouse-down",
+    "body": "await page.mouse.down();",
+    "description": "Dispatches a `mousedown` event within the page"
+  },
+  "page.mouse.move": {
+    "prefix": "pw-page-mouse-move",
+    "body": "await page.mouse.move();",
+    "description": "Dispatches a `mousemove` event within the page"
+  },
+  "page.mouse.up": {
+    "prefix": "pw-page-mouse-up",
+    "body": "await page.mouse.up();",
+    "description": "Dispatches a `mouseup` event within the page"
+  },
   "page.on('pageerror')": {
     "prefix": "pw-page-on-pageerror",
     "body": ["page.on('pageerror', error => {", "\t${0:console.log(error);}", "});"],
