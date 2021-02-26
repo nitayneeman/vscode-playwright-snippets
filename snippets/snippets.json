@@ -403,11 +403,6 @@
     "body": "await page.keyboard.up('$0');",
     "description": "Dispatches a `keyup` event within the page"
   },
-  "page.on('metrics')": {
-    "prefix": "pw-page-on-metrics",
-    "body": ["page.on('metrics', result => {", "\t${0:console.log(result.metrics);}", "});"],
-    "description": "Emitted when a script within the page invokes `console.timeStamp`"
-  },
   "page.mouse.click": {
     "prefix": "pw-page-mouse-click",
     "body": "await page.mouse.click(${2:0}, ${3:100});",
