@@ -1,8 +1,9 @@
 {
   "name": "playwright-snippets",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Nitay Neeman",
+  "description": "📋 A Visual Studio Code extension which adds predefined useful code snippets for Playwright",
   "homepage": "https://github.com/nitayneeman/vscode-playwright-snippets",
   "keywords": [
     "Playwright"
@@ -45,7 +46,7 @@
   "badges": [
     {
       "description": "Build",
-      "url": "https://travis-ci.com/nitayneeman/vscode-playwright-snippets.svg?token=vHfpxFNvotCsScqrpvMs&branch=master",
+      "url": "https://travis-ci.com/nitayneeman/vscode-playwright-snippets.svg?token=vHfpxFNvotCsScqrpvMs&branch=main",
       "href": "https://travis-ci.com/nitayneeman/vscode-playwright-snippets"
     }
   ],
