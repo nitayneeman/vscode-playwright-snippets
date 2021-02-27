@@ -462,5 +462,34 @@
     "prefix": "pw-page-on-worker",
     "body": ["page.on('worker', worker => {", "\t${0:console.log(worker.url());}", "});"],
     "description": "Emitted when a dedicated `WebWorker` is spawned by the page"
+  },
+  "Examples - basic": {
+    "prefix": "pw-examples-basic",
+    "body": [
+      "const { chromium } = require('playwright');",
+      "",
+      "(async () => {",
+      "\tconst browser = await chromium.launch();",
+      "\tconst page = await browser.newPage();",
+      "",
+      "\t$0",
+      "",
+      "\tawait browser.close();",
+      "})();"
+    ],
+    "description": "Creates a basic usage example of a page"
+  },
+  "Examples - drag and drop": {
+    "prefix": "pw-examples-dragAndDrop",
+    "body": [
+      "// Drags the mouse from a point",
+      "await page.mouse.move($1);",
+      "await page.mouse.down();",
+      "",
+      "// Drops the mouse to another point",
+      "await page.mouse.move($2);",
+      "await page.mouse.up();"
+    ],
+    "description": "Creates an example that drags the mouse from a point and drops it to another point"
   }
 }
