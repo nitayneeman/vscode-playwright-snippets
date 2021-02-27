@@ -388,15 +388,15 @@
     "body": "await page.keyboard.press('$0');",
     "description": "Presses on a specific key within the page"
   },
-  "page.keyboard.sendCharacter": {
-    "prefix": "pw-page-keyboard-sendCharacter",
-    "body": "await page.keyboard.sendCharacter('$0');",
-    "description": "Dispatches a `keypress` and `input` event within the page"
+  "page.keyboard.insertText": {
+    "prefix": "pw-page-keyboard-insertText",
+    "body": "await page.keyboard.insertText('$0');",
+    "description": "Dispatches an `input` event within the page"
   },
   "page.keyboard.type": {
     "prefix": "pw-page-keyboard-type",
     "body": "await page.keyboard.type('$0');",
-    "description": "Types a text into a focused element within the page"
+    "description": "Dispatches `keydown`, `keypress`/`input` and `keyup` events within the page for each given character"
   },
   "page.keyboard.up": {
     "prefix": "pw-page-keyboard-up",
