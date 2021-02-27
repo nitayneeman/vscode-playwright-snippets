@@ -1,6 +1,6 @@
 {
   "name": "playwright-snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Nitay Neeman",
   "description": "📋 A Visual Studio Code extension which adds predefined useful code snippets for Playwright",
