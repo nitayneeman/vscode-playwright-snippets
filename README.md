@@ -133,6 +133,7 @@ Below is attached a list of all supported snippets.
 | `pw-page-mouse-down`          | page.mouse.down                 |
 | `pw-page-mouse-move`          | page.mouse.move                 |
 | `pw-page-mouse-up`            | page.mouse.up                   |
+| `pw-page-pause`               | page.pause                      |
 | `pw-page-pdf`                 | page.pdf                        |
 | `pw-page-press`               | page.press                      |
 | `pw-page-reload`              | page.reload                     |
