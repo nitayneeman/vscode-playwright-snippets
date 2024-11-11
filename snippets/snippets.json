@@ -249,6 +249,11 @@
     "body": "await page.pdf({ path: '${2:page.pdf}', format: '${3|A4,Letter,Legal,Tabloid,Ledger,A0,A1,A2,A3,A5,A6|}' });",
     "description": "Generates a PDF from the page"
   },
+  "page.pause": {
+    "prefix": "pw-page-pause",
+    "body": "await page.pause();",
+    "description": "Pauses Playwright script execution when in headed mode"
+  },
   "page.press": {
     "prefix": "pw-page-press",
     "body": "await page.press('$1', '${2:F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|Backspace|Tab|Delete|Escape|Enter|PageUP|PageDown|ArrowUp|ArrowDown|ArrowLeft|ArrowRight}', fullPage: '${3|true,false|}' });",
